@@ -1,5 +1,5 @@
 # DER-DE-5000-IR-UART-TTL-Adapter
-3D printable IR-UART TTL Adapter to connect DER DE-5000 LCR Meter to PC. 
+3D printable IR-UART TTL Adapter to connect DER DE-5000 LCR Meter to PC. Created with Rhino 8.
 
 I stumbled across a thread on eevblog-forum about a Software to connect DER DE-5000 using a selfmade Infrared-UART TTL bridge.
 There was a 3D printable enclosre. Since i own a DER DE-5000 LCR Meter, i redesigned the enclosure a bit to fit the conture of the device.
@@ -11,6 +11,8 @@ I used some Kapton tape under the resistor.
 
 The software can be found on the internet. Should also work with TestController (well known java app).
 I use 19200 baud 8N1, and on Windows, i disabled power saving in device manager for this device.
+
+For printing the enclosure, i used a 0,25 mm nozzle on my Prusa MK4S at 0,12 mm layer height.
 
 <p align="center">
 <img src="IMG_20251108_114108.jpg" width="250"> 

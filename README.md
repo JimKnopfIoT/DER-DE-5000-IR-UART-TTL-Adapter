@@ -12,7 +12,7 @@ I used some Kapton tape under the resistor.
 The software can be found on the internet. Should also work with TestController (well known java app).
 I use 19200 baud 8N1, and on Windows, i disabled power saving in device manager for this device.
 
-For printing the enclosure, i used a 0,25 mm nozzle on my Prusa MK4S at 0,12 mm layer height.
+For printing the enclosure, i used PETG and a 0,25 mm nozzle on my Prusa MK4S at 0,12 mm layer height.
 
 <p align="center">
 <img src="IMG_20251108_114108.jpg" width="250"> 

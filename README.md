@@ -1,8 +1,8 @@
-# DER-DE-5000-IR-UART-TTL-Adapter
-3D printable IR-UART TTL Adapter to connect DER DE-5000 LCR Meter to PC. Created with Rhino 8.
+# DER EE DE-5000 IR-UART TTL-Adapter
+3D printable IR-UART TTL-Adapter to connect DER EE DE-5000 LCR Meter to PC. Created with Rhino 8.
 
-I stumbled across a thread on eevblog-forum about a Software to connect DER DE-5000 using a selfmade Infrared-UART TTL bridge.
-There was a 3D printable enclosre. Since i own a DER DE-5000 LCR Meter, i redesigned the enclosure a bit to fit the conture of the device.
+I stumbled across a thread on eevblog-forum about a Software to connect DER EE DE-5000 using a selfmade Infrared-UART TTL bridge.
+There was a 3D printable enclosre. Since i own a DER EE DE-5000 LCR Meter, i redesigned the enclosure a bit to fit the conture of the device.
 
 The enclose consists of two parts that clamp together. When inserting the adapter, press a bit harder until it snaps.
 Inside is a CP2102 UART adapter, a L-53P3C IR phototransistor (long leg connected to GND, short leg connected to RX) and a 4,7k Ohm resistor.

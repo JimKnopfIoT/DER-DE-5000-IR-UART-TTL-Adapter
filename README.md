@@ -80,4 +80,4 @@ The RN4871 runs in transparent UART mode and forwards the raw serial stream over
 
 Since I'm not a software developer, I let Claude code a BLE-to-COM-port bridge for the Windows side. It connects to the RN4871, receives the BLE notifications and feeds them into a com0com virtual serial port pair, so the original DER EE PC software just sees a normal COM port and displays the measured value (for example 219.0 Ω) exactly as it would over the cable.
 
-The matching enclosure for this version is included as `DE-5000_IR_RN4871.stp`, `DE-5000_IR_RN4871.stl` and also in the `DE-5000_IR_RN4871.3dm`.
+The matching enclosure for this version is included as `DE-5000_IR_RN4871_housing.stp`, `DE-5000_IR_RN4871_housing.stl`, `DE-5000_IR_RN4871_housing-cover.stp`, `DE-5000_IR_RN4871_housing-cover.stl` and also in the `DE-5000_IR_RN4871.3dm`.

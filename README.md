@@ -106,15 +106,17 @@ Getting the firmware onto the module and setting its baud rate turned out to be 
   </tr>
   <tr>
     <td><img src="22.png" width="250"></td>
+    <td><img src="23.jpg" width="250"></td>
+    <td><img src="24.jpg" width="250"></td>
   </tr>
 </table>
 
 ### How it works
 
-So I designed a dedicated programming adapter that holds the module and contacts its pads with **pogo-pins**. The pins are mounted at a slight angle: at the **top** they land exactly on the module's pads, while at the **bottom** they line up with a standard **2 mm PCB grid**. The pogo-pins are soldered to that PCB on the underside, which also mechanically holds the whole adapter together and keeps everything rigid while the module is dropped in.
+So I designed a dedicated programming adapter that holds the module and contacts its pads with **pogo-pins**. The pins are mounted at a slight angle: at the **top** they land exactly on the module's pads, while at the **bottom** they line up with a standard **2 mm PCB grid**. The pogo-pins are soldered to that PCB on the underside, which also mechanically holds the whole adapter together and keeps everything rigid while the module is dropped in. On the RN4871 version the module is kept in position by a small **plastic clamp**.
 
 Two of the module's control lines have to be toggled while flashing: **RESET_N** (active low) and **P2_0** (pin 4 — low = bootloader / programming mode, high or open = normal application). Both got a switch/button on the adapter, so the module can be put into programming mode and reset without any re-wiring.
 
 > ⚠️ The same two decoupling capacitors from the finished build are essential here as well: a **100 nF** and a **10 µF** (0402) between VDD and GND — see image 19. Without them the module browns out during flashing and programming simply fails.
 
-There are two versions of the fixture, one for the **RN4871** and one for the **RN4871U**: `RN4871_fixture.stp`, `RN4871_fixture.stl` and `RN4871U_fixture.stp`, `RN4871U_fixture.stl` (plus a lid, `RN4871U_fixture_lid.stl` / `RN4871U_fixture_Lid.stp`), and the editable Rhino sources `RN4871_fixture.3dm` / `RN4871U_fixture.3dm`.
+There are two versions of the fixture, one for the **RN4871** and one for the **RN4871U**. The RN4871U version is a bit more advanced: instead of the plastic clamp it has a **lid that is held closed by two mini neodymium magnets**. The files are `RN4871_fixture.stp`, `RN4871_fixture.stl` and `RN4871U_fixture.stp`, `RN4871U_fixture.stl` (plus the lid, `RN4871U_fixture_lid.stl` / `RN4871U_fixture_Lid.stp`), and the editable Rhino sources `RN4871_fixture.3dm` / `RN4871U_fixture.3dm`.

@@ -70,7 +70,9 @@ The optical front-end uses the same idea as the USB version, but tuned for the R
 
 Do not skip these — this cost us a lot of debugging. On start-up and especially during BLE pairing the radio draws very short microsecond current spikes far above the average (well over 50 mA), which a bench supply's slow averaging never even shows. Without a local reservoir those spikes collapse the voltage at the VDD pin, the module browns out and drops into a reboot/crash loop: it never finishes booting, can't be programmed or paired reliably, and Windows pairing fails every time in a way that looks exactly like a firmware bug. Adding the two capacitors was what finally made the whole chain stable.
 
-Getting there took a few detours. An inverting Schmitt trigger turned out to be a polarity dead-end (it mostly reacted to ambient light instead of the meter). The RN4871 also has a surprisingly high UART input threshold (roughly 70 % of VCC), so the pull-up value matters: 470 Ohm keeps the phototransistor too close to saturation, 1k is already too slow, and **680 Ohm is the sweet spot** for clean edges at 19200 baud 8N1.
+Getting there took a few detours. An inverting Schmitt trigger turned out to be a polarity dead-end (it mostly reacted to ambient light instead of the meter). The RN4871 also has a surprisingly high UART input threshold (roughly 70 % of VCC), so the pull-up value matters: 470 Ohm keeps the phototransistor too close to saturation, 1k is already too slow, and **680 Ohm is the sweet spot** for clean edges at 9600 baud 8N1.
+
+The DE-5000 sends its IR data at **9600 baud 8N1**, but the RN4871's UART defaults to 115200 baud out of the box. So the module has to be reconfigured once to 9600 baud (command mode: `SB,09`, then reboot) so that its transparent UART matches the meter — otherwise the incoming serial stream is garbled.
 
 The RN4871 runs in transparent UART mode and forwards the raw serial stream over BLE. On the PC side the data flows like this:
 
